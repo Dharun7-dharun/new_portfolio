@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharun Developer Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(150deg, #f8ecec54, #0a27e8db);
+    color:#111;
+}
+
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:75px;
+    background-color: #f0f0ef8f;;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+nav.scrolled{
+    background:#ffffff;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.53);
+}
+
+nav ul{
+    display:flex;
+}
+
+nav ul li{
+    list-style:none;
+    margin:0 20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#111;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#d90e5c;
+}
+
+.left{
+    font-size:28px;
+    font-weight:700;
+}
+
+.firstsection{
+    height:70vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding-top:50px;
+}
+
+.leftsection{
+    font-size:42px;
+}
+
+.purple{
+    color:#d90e5c;
+}
+
+#element{
+    color:#d90e5c;
+    font-weight:600;
+}
+
+.hero-btn{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(45deg,red,#6a00ff);
+    color:white;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 10px 20px rgba(40, 35, 35, 0.2);
+}
+
+.hero-btn:hover{
+    transform:translateY(-5px);
+}
+
+.rightsection img{
+    width:380px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0px);}
+}
+
+
+section{
+    padding:45px 10%;
+}
+
+h1{
+    font-size:36px;
+    margin-bottom:40px;
+}
+
+.grey{
+    color:#555;
+}
+
+.education-box{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.edu-card{
+    flex:1;
+    background: #ffffffb5;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.4s;
+    transform:translateY(50px);
+    opacity:0;
+}
+
+.edu-card:hover{
+    transform:translateY(-10px);
+}
+
+
+.project-container{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.project-card{
+    width:300px;
+    padding:30px;
+    background: #ffffffb5;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+    transition:0.5s;
+    transform:scale(0.8);
+    opacity:0;
+}
+
+.project-card:hover{
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#d90e5c,#6a00ff);
+    color:white;
+}
+
+
+footer{
+    background:#111;
+    color:white;
+    padding:60px 10%;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer-section{
+    margin-bottom:20px;
+}
+
+.footer-section ul{
+    list-style:none;
+}
+
+.footer-section ul li{
+    margin:8px 0;
+}
+
+.footer-section ul li a{
+    color:#aaa;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-section ul li a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    color:#777;
+}
+
+
+
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#d90e5c;
+    color:white;
+    border:none;
+    padding:12px 15px;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media(max-width:768px){
+
+    nav{
+        height:60px;
+        padding:0 20px;
+        justify-content:space-between;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav ul li{
+        margin:0 8px;
+    }
+
+    .left{
+        font-size:15px;
+    }
+
+    nav ul li a{
+        font-size:14px;
+    }
+
+    .firstsection{
+        flex-direction:column;
+        text-align:center;
+        padding-top:100px;
+    }
+
+    .leftsection{
+        font-size:26px;
+    }
+
+    .rightsection img{
+        width:250px;
+        margin-top:25px;
+    }
+
+    .education-box{
+        flex-direction:column;
+    }
+
+    .project-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .project-card{
+        width:90%;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="left">Dharun's Portfolio</div>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="https://www.instagram.com/dharungowda_7?igsh=ZGt5ZDkybzU0eHFx">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="firstsection">
+<div class="leftsection">
+Hi, I'm <span class="purple">Dharun</span><br>
+I am a <span id="element"></span><br>
+
+<a href="https://www.linkedin.com/in/dharun-s-6702b2371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><button class="hero-btn">Hire Me</button></a>
+</div>
+<div class="rightsection">
+<img src="bg1.png" alt="">
+</div>
+</section>
+<hr>
+<section id="education">
+<span class="grey">My Journey</span>
+<h1>Education</h1>
+<div class="education-box">
+<div class="edu-card">
+<h3>SSLC</h3>
+<p>Model English High School,chickmaglur 2022 with a (87.7%) ,state board karnataka.</p>
+</div>
+<div class="edu-card">
+<h3>Diploma (EEE)</h3>
+<p>Diploma in electrical and electronics engineering 2023-2025, DACG Government polytechinc chickmaglur with CGPA 8.98</p>
+</div>
+<div class="edu-card">
+<h3>B.E AIML</h3>
+<p>NIE Collage of Engineering, Mysore 2025-2028,AIML With On Going CGPA ---</p>
+</div>
+</div>
+</section>
+<hr>
+<section id="projects">
+<span class="grey">My Work</span>
+<h1>Projects</h1>
+<div class="project-container">
+<div class="project-card">
+<a href="error.html"><h3>Portfolio Website</h3></a>
+<a href="error.html"><p>Modern responsive portfolio design.</p></a>
+</div>
+<div class="project-card">
+    <a href="error.html"><h3>Runshi adoption Project</h3></a>
+<a href="error.html"><p>Developed a web-based adoption platform for Runshi.</p></a>
+</div>
+<div class="project-card">
+<a href="error.html"><h3>D-Adventure Project</h3></a>       
+<a href="error.html"><p>Developed an Adventure Booking website.</p></a>
+</div>
+</div>
+</section>
+
+<footer>
+    
+<div class="footer">
+<div class="footer-section">
+<h3>Dharun Developer</h3>
+<p>Web Developer | AI Learner</p>
+</div>
+<div class="footer-section">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="https://www.linkedin.com/in/dharun-s-6702b2371?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Linkden</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Contact</h4>
+<p>Email: kumardharun056@gmail.com</p>
+</div>
+</div>
+<div class="footer-bottom">
+© 2026 Dharun | All Rights Reserved
+</div>
+</footer>
+
+<button id="topBtn">↑</button>
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+<script>
+
+new Typed('#element', {
+strings:['Web Developer','AI Learner','Video Editor','Photographer'],
+typeSpeed:90,
+backSpeed:60,
+loop:true
+});
+
+window.addEventListener("scroll",function(){
+document.querySelector("nav").classList.toggle("scrolled",window.scrollY>50);
+
+document.querySelectorAll(".edu-card, .project-card").forEach(el=>{
+let position=el.getBoundingClientRect().top;
+if(position < window.innerHeight-100){
+el.style.opacity="1";
+el.style.transform="translateY(0) scale(1)";
+}
+});
+
+let topBtn=document.getElementById("topBtn");
+if(window.scrollY>400){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+});
+
+document.getElementById("topBtn").onclick=function(){
+window.scrollTo({top:1,behavior:"smooth"});
+};
+
+</script>
+
+</body>
+</html>
