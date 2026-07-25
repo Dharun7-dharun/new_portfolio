@@ -22,3 +22,5 @@ Node.js / Express.js
 Database (if used):
 
 MySQL / MongoDB
+
+The page is live now:https://dharungowda.netlify.app/
